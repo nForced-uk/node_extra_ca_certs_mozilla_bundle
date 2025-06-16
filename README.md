@@ -1,4 +1,4 @@
-# node_extra_ca_certs_mozilla_bundle
+# node_extra_ca_certs_mozilla_bundle_updated
 
 If you are trying to connect to a secure website via nodejs. Although, the site may work in the browser, you may run into errors such as
  
@@ -38,19 +38,19 @@ You can use any of the above bundles with NODE_EXTRA_CA_CERTS.
 
 ### To install:
 
-`npm install --save node_extra_ca_certs_mozilla_bundle`
+`npm install --save node_extra_ca_certs_mozilla_bundle_updated`
 
-During the installation of the module, it downloads the latest certificates from the Mozilla database and builds the PEM file in `node_modules/node_extra_ca_certs_mozilla_bundle/ca_bundle` folder.
+During the installation of the module, it downloads the latest certificates from the Mozilla database and builds the PEM file in `node_modules/node_extra_ca_certs_mozilla_bundle_updated/ca_bundle` folder.
 
 You can launch your script while using the above certificates using: 
 
 ```
-NODE_EXTRA_CA_CERTS=node_modules/node_extra_ca_certs_mozilla_bundle/ca_bundle/ca_intermediate_root_bundle.pem node your_script.js
+NODE_EXTRA_CA_CERTS=node_modules/node_extra_ca_certs_mozilla_bundle_updated/ca_bundle/ca_intermediate_root_bundle.pem node your_script.js
 ```
 
 for Windows use:
 ```
-npx cross-env NODE_EXTRA_CA_CERTS=node_modules/node_extra_ca_certs_mozilla_bundle/ca_bundle/ca_intermediate_root_bundle.pem node your_script.js
+npx cross-env NODE_EXTRA_CA_CERTS=node_modules/node_extra_ca_certs_mozilla_bundle_updated/ca_bundle/ca_intermediate_root_bundle.pem node your_script.js
 ```
 
 ### To use the PEM file in code
@@ -58,7 +58,7 @@ This is useful when you want to run as root or listen on privilege port like 80.
 ```
 const fs = require('fs');
 const https = require('https');
-https.globalAgent.options.ca = fs.readFileSync('node_modules/node_extra_ca_certs_mozilla_bundle/ca_bundle/ca_intermediate_root_bundle.pem');
+https.globalAgent.options.ca = fs.readFileSync('node_modules/node_extra_ca_certs_mozilla_bundle_updated/ca_bundle/ca_intermediate_root_bundle.pem');
 ```
 
 ### To include your custom PEM certificates in code along with this file
@@ -67,6 +67,6 @@ If you want to include your custom certificate and still want to connect to othe
 ```
 const fs = require('fs');
 const https = require('https');
-https.globalAgent.options.ca = yourCertificatePEMcontent + fs.readFileSync('node_modules/node_extra_ca_certs_mozilla_bundle/ca_bundle/ca_intermediate_root_bundle.pem');
+https.globalAgent.options.ca = yourCertificatePEMcontent + fs.readFileSync('node_modules/node_extra_ca_certs_mozilla_bundle_updated/ca_bundle/ca_intermediate_root_bundle.pem');
 ```
 
