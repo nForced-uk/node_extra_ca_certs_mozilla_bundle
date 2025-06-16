@@ -66,7 +66,7 @@ async function build() {
     console.log('Intermediate and Root certificates bundle at ca_bundle/ca_intermediate_root_bundle.pem');
     console.log();
     console.log('To run your Node script with the bundled certificate run:')
-    console.log('NODE_EXTRA_CA_CERTS=node_modules/node_extra_ca_certs_mozilla_bundle/ca_bundle/ca_intermediate_root_bundle.pem node your_script.js\n');
+    console.log('NODE_EXTRA_CA_CERTS=node_modules/node_extra_ca_certs_mozilla_bundle_updated/ca_bundle/ca_intermediate_root_bundle.pem node your_script.js\n');
 }
 
 build();
